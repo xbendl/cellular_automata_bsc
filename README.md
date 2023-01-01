@@ -2,10 +2,10 @@
 This repository contains a software created for my bachelor thesis "Cellular Automaton in Dynamical Environment". Text of my thesis can be found at:
 https://www.fit.vut.cz/study/thesis/4483/.en?year=0&stud=bendl (czech language)
 
-==========================================================
+======================================================
 Bakalarska prace: Celularni automat v dynamickem prostredi
 Platforma: OS Linux
-==========================================================
+======================================================
 
 Pozadavky:
 ==========
