@@ -1,0 +1,71 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; CA simulation configuration file
+
+[Evolution parameters]
+; Number of adjoining cells (4 = simple neighbourhood, 8 = Moore neighbourhood)
+Neighbourhood = 4
+
+; Number of automaton steps during evolution step
+AutomatonStep = 32
+
+; Maximum number of evolution steps. If progream reach this value, parameters are re-count
+MaxEvolutionStep = 1000
+
+; Probability of mutatation rule
+MutationProbability = 0.01
+
+; Number of damaged configurations for training self-repair property
+DamagedConfigurationsCount = 100
+
+; Percentage limit (in decimals) express maximal damage of grid
+MaxDamagedPercentage = 0.4	
+
+; Time interval for adding new value to evolution graph at evolution rules (in ms)
+TimeIntervalEvolutionRules = 250
+
+; Time interval between two evolution steps during analyse rules
+TimeIntervalAnalyseRules = 0.5
+
+; Number of values on graph at evolution rules
+EvolutionGraphValuesCount = 100
+
+[Improvements]
+; 8 neighbours (instead 4 neighbours) are used for calculate new cell rule (1 = enabled, 0 = disabled)
+ExtendedRuleCalculation = 0
+
+; New rule for certain cell isn't calculate from neighbourst if his fitness is better than fitness in previous step (1 = enabled, 0 = disabled)
+RespectFitnessImprovement = 1
+
+; Number of consecutive steps in which cell's fitness must be on maximal value for lock cell ruleset (-1 = disabled)
+LockStepCount = 15
+
+; Number of steps after simulation start in which cell's rules can't be restarted (-1 = disabled)
+InitialPhaseStep = 100
+
+; Percentage limit (in decimals) express number of cells which must have final value to precede reset all rules (-1 = disabled)
+ResetGridPercentageLimit = 0.2
+
+; Sequence length used for calculate rule fruitfullness (-1 = disabled)
+FitnessMeasuringSequence = 10
+
+; Percentage limit (in decimals) express rate of successful under which is cell rule reseted (-1 = disabled)
+ResetCellPercentageLimit = 0.5
+
+[Analyse parameters]
+; Default number of steps during analyse rules
+DefaultStepInterval = 1
+
+; Default number of steps during analyse rules
+DefaultDamage = 0.01
+
+[Others]
+; Time interval for adding new value to evolution graph at evolution rules (in ms)
+TimeIntervalEvolutionRules = 250
+
+; Time interval between two evolution steps during analyse rules
+TimeIntervalAnalyseRules = 1000
+
+; Number of values on graph at evolution rules
+EvolutionGraphValuesCount = 100
+
+
