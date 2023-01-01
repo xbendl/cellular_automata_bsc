@@ -4,52 +4,30 @@ https://www.fit.vut.cz/study/thesis/4483/.en?year=0&stud=bendl (czech language)
 
 ![GUI](https://github.com/xbendl/cellular_automata_bsc/blob/main/fig.png)
 
-=============================================
-Bakalarska prace: Celularni automat v dynamickem prostredi
-Platforma: OS Linux
-=============================================
-
-Pozadavky:
+Abstract:
 ==========
+The thesis focuses on a new concept of cellular automata control based on instructions. The instruction can be understood as a rule that checks the states of cells in pre-defined areas in the cellular neighbourhood. If a given condition is satisfied, the state of the central cell is changed according to the definition of the instruction. Because it’s possible to perform more instructions in one computational step, their sequence can be understood as a form of a short program. This concept can be extended with simple operations applied to the instruction’s prescription during interpretation of the instructions – an example of such operation can be row shift or column shift. An advantage of the instruction-based approach lies in the search space reduction. In comparison with the table-based approach, it isn’t necessary to search all the possible configurations of the cellular neighbouhood, but only several areas determined by the instructions. While the groups of the inspected cells in the cellular neighbourhood are designed manually on the basis of the analysis of the solved task, their sequence in the chromosome is optimized by genetic algorithm. The capability of the proposed method of cellular automata control is studied on these benchmark tasks - majority, synchronization, self-organization and the design of combinational circuits.
+
+Requirements:
+============
 1) OS Linux
-2) Knihovna Qt v.4
+2) Qt library v.4
 
-Instalace:
-==========
-1) Spusteni skriptu ./install.sh s pravy roota (bude se instalovat knihovna Qwt)
+Installation:
+============
+1) Run ./install.sh with root permission (because it needs to install Qwt)
 
-Spusteni programu:
-==================
+How to run it:
+=============
 Synopsis: ./automaton [-u usage] [-i inputFile]
--u Nepovinny parametr urcujici vyuziti programu
-   1 = evoluce pravidel, 2 = analyza pravidel
--i Nepovinny parametr urcujici cestu ke vstupnimu souboru
-   se zadanim ulohy pri "-u 1", s pravidly pri "-u 2"
+-u Optional parameters specifying the program use
+   1 = CA rule evolution, 2 = CA rule analysis
+-i Optional parameter specifying the path to the input file
 
-Struktura programu:
-===================
-Program je rozdelen pomoci zalozek na tri casti:
-- Tvorba uloh: Slouzi k vytvoreni ulohy: zygoty a hledaneho vzoru.
-- Evoluce pravidel: Slouzi k evoluci zakladnich pravidel pro vyvoj ze zygoty
-  do hledaneho vzoru a pro vyvoj pravidel schopnych sebe-opravy.
-- Analyza pravidel: Slouzi k testovani vyvinutych pravidel.
-
-Napoveda v programu:
-====================
-Vetsina ovladacich prvku ma napovedu. K jejimu zobrazeni dojde po prejeti mysi
-nad oznacenim daneho prvku (napr. "Reset bunky" v zalozce "Evoluce pravidel").
-Podrobnejsi navod je uveden jako "Dodatek B" v textu bakalarske prace
-
-Nastaveni parametru:
-====================
-Cesta k souboru s parametry: ./configuration.txt
-- Soubor s vychozimi parametry evoluce a analyzy pravidel
-  vcetne jejich popisu.
-- Vsechny parametry lze pozdeji menit ve spustene aplikaci pomoci
-  interaktivnich ovladacich prvku.
-
-POZNAMKY:
-=========
-K realizaci grafu v aplikaci zobrazujiciho prubeh evoluce byla vyuzita
-knihovna Qwt (http://qwt.sf.net).
+User interface:
+===============
+Software contains three main sections (tabs) for work with cellular automata (CA):
+- Create jobs: Specify "zygote" figure and desired "final" figure
+- Evolution of CA rules: Evolution of rules capable of development of specified final figure from zygote figure and self-correction after random destruction of evolved figure
+- Test CA rules
 
