@@ -1,11 +1,11 @@
-# cellular_automata_bsc
-This repository contains a software created for my master thesis "Intruction-controlled cellular automata". Text of my thesis can be found at:
-https://www.fit.vut.cz/study/thesis/11121/.cs?year=0&stud=bendl (czech language)
+# cellular_automata_msc
+This repository contains a software created for my bachelor thesis "Cellular Automaton in Dynamical Environment". Text of my thesis can be found at:
+https://www.fit.vut.cz/study/thesis/4483/.en?year=0&stud=bendl (czech language)
 
-======================================================
-Diplomova prace: Instrukcemi rizene celularni automaty
+==========================================================
+Bakalarska prace: Celularni automat v dynamickem prostredi
 Platforma: OS Linux
-======================================================
+==========================================================
 
 Pozadavky:
 ==========
@@ -18,43 +18,36 @@ Instalace:
 
 Spusteni programu:
 ==================
-Synopsis: ./automaton [-u usage]
+Synopsis: ./automaton [-u usage] [-i inputFile]
 -u Nepovinny parametr urcujici vyuziti programu
-   1 = evoluce pravidel, 2 = analyza pravidel,
-   3 = tvorba instrukce, 4 = tvorba uloh
+   1 = evoluce pravidel, 2 = analyza pravidel
+-i Nepovinny parametr urcujici cestu ke vstupnimu souboru
+   se zadanim ulohy pri "-u 1", s pravidly pri "-u 2"
 
 Struktura programu:
 ===================
 Program je rozdelen pomoci zalozek na tri casti:
-- Evoluce instrukci: Slouzi k nalezeni co nejlepsiho reseni zvolene ulohy.
-  Reseni je reprezentovano posloupnosti instrukci (optimalizovano pres GA).
-- Analyza instrukci: Slouzi k overeni kvality vyvinuteho reseni sledovanim
-  chovani automatu v jednotlivych krocich vyvoje.
-- Tvorba instrukci: Slouzi k vytvareni instrukci pouzitelnych pri hledani
-  reseni vybrane ulohy.
-- Tvorba uloh: Slouzi k vytvareni zadani uloh - dvojic pocatecni konfigurace,
-  cilova konfigurace pro problem sebe-organizace.
+- Tvorba uloh: Slouzi k vytvoreni ulohy: zygoty a hledaneho vzoru.
+- Evoluce pravidel: Slouzi k evoluci zakladnich pravidel pro vyvoj ze zygoty
+  do hledaneho vzoru a pro vyvoj pravidel schopnych sebe-opravy.
+- Analyza pravidel: Slouzi k testovani vyvinutych pravidel.
 
 Napoveda v programu:
 ====================
-Ovladaci prvky s nejasnou funkci jsou vybaveny napovedou. K jejimu zobrazeni 
-dojde po prejeti mysi nad danym ovladacim prvkem.
+Vetsina ovladacich prvku ma napovedu. K jejimu zobrazeni dojde po prejeti mysi
+nad oznacenim daneho prvku (napr. "Reset bunky" v zalozce "Evoluce pravidel").
+Podrobnejsi navod je uveden jako "Dodatek B" v textu bakalarske prace
 
 Nastaveni parametru:
 ====================
 Cesta k souboru s parametry: ./configuration.txt
-- Soubor s vychozimi parametry evoluce a analyzy instrukci vcetne 
-  jejich popisu.
-- Nekolik nejdulezitejsich parametru lze pozdeji menit ve spustene aplikaci 
-  pomoci interaktivnich ovladacich prvku.
+- Soubor s vychozimi parametry evoluce a analyzy pravidel
+  vcetne jejich popisu.
+- Vsechny parametry lze pozdeji menit ve spustene aplikaci pomoci
+  interaktivnich ovladacich prvku.
 
 POZNAMKY:
 =========
-- K realizaci grafu v aplikaci zobrazujiciho prubeh evoluce byla vyuzita
-  knihovna Qwt (http://qwt.sf.net).
-- K praci s XML soubory byla pouzita knihovna TinyXML 
-  (http://sourceforge.net/projects/tinyxml/).
-- Pro vyzkouseni analyzy instrukci lze vyuzit pripravenych souboru s automaty
-  a s resenimi ve slozka "example_tasks" a "example_solutions"
-
+K realizaci grafu v aplikaci zobrazujiciho prubeh evoluce byla vyuzita
+knihovna Qwt (http://qwt.sf.net).
 
