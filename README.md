@@ -1,8 +1,8 @@
-# cellular_automata_msc
+# cellular_automata_bsc
 This repository contains a software created for my bachelor thesis "Cellular Automaton in Dynamical Environment". Text of my thesis can be found at:
 https://www.fit.vut.cz/study/thesis/4483/.en?year=0&stud=bendl (czech language)
 
-([https://github.com/xbendl/cellular_automata_bsc/blob/main/fig.png](GUI))
+![GUI](https://github.com/xbendl/cellular_automata_bsc/blob/main/fig.png)
 
 ======================================================
 Bakalarska prace: Celularni automat v dynamickem prostredi
