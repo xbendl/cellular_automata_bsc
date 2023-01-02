@@ -15,6 +15,7 @@ Run `install.sh` with root permission (because it needs to install Qwt)
 How to run it:
 =============
 ```Synopsis: ./automaton [-u usage] [-i inputFile]```
+
 -u Optional parameters specifying the program use
    1 = CA rule evolution, 2 = CA rule analysis
 -i Optional parameter specifying the path to the input file
